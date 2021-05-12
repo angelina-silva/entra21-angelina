@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <script>
+    let vetor = []
+    let pares = 0
+    for (let i = 0; i < 10; i++) {
+            vetor[i] = +prompt(`Digite o ${i + 1}° valor`)
+    } 
+       
+     for (let i = 0, tamanhoVetor = vetor.length; i < tamanhoVetor; i++){
+         if (vetor [i]% 2 === 0) {
+             console.log(vetor[i])
+             pares++
+         }
+     }
+     console.log (`O vetor possui ${pares} valores(s) pares`)
+</script>
+    
+</body>
+</html>
