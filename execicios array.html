@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body> <script>
+    //1 )
     let vetor = []
     let pares = 0
     for (let i = 0; i < 10; i++) {
@@ -19,6 +20,75 @@
          }
      }
      console.log (`O vetor possui ${pares} valores(s) pares`)
+
+     //2)
+     let vetor = []
+     let maior
+     let posicao = 0
+      for  ( let i = 0; i < 5; i++){
+          vetor[i] = +prompt("Digite o número")
+
+          if (i === 0) {
+              maior = vetor[i]
+          } else if (vetor[i] > maior) {
+              maior = vetor[i]
+              posicao = i
+          }
+      }
+      console.log(`Maior: ${maior}`)
+      console.log(`Posição: ${posicao}`)
+      
+      //3)
+      let vetor = []
+      let maior = 0
+      let menor = 0
+      for ( let i = 0; i < 5; i ++){
+          vetor[i] = +prompt("Digite o número")
+
+         if (vetor [i] > maior){
+             maior = vetor[i]
+             menor = vetor [0]
+         }if (menor > vetor[i]){
+             menor = vetor [i]
+         }
+        }
+         console.log(`Maior: ${maior}\nMenor: ${menor}`)
+
+         //4)
+         let vetor =[]
+         for ( let i = 0; i < 5; i++) {
+             vetor [i] = +prompt("Digite o numero")
+        }
+         
+         //5)
+         let vetor = [],
+         Maria,
+         Alexia,
+         Jõao,
+         Paulo,
+         Ana
+         let nome
+        for(let i = 0; i < 1; i++){
+            vetor [i] = +prompt("Digite o nome")
+
+            if (vetor [i] === nome){
+                nome = vetor [i]
+            } if (vetor [i] != nome)
+}         
+
+         
+         
+
+          
+
+    
+          
+        
+
+
+
+     
+
 </script>
     
 </body>
