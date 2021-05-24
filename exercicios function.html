@@ -160,39 +160,117 @@
         Exemplo:
         repetirElemento("oi", 3) // ["oi", "oi", "oi"]*/
 
-
         
-        
-        function repetirElemento(elemento,quantidade)
-         let vetor = []
-         
-            for (let i = 0; i < quantidade; i++){
-             vetor [i] = elemento
-
-             return (vetor[i] = elemento) 
-        }
-
+        let quantidade = +prompt("Informe a quantidade a ser repetida")
         let elemento = prompt("digite Oi")
-        let repetir = +prompt("Informe a quantidade a ser repetida")
 
-        cosole.log (repetirElemento(elemento,quantidade))
+        function repetirElemento(elemento,quantidade){
+           let resultado = []
+            for (let i = 0; i < quantidade; i++){
+                resultado[i] = elemento
+            }
+            return resultado
+        }      
+        
+        
+        console.log(repetirElemento(elemento,quantidade))
 
         /*10)Escreva um script que receba o ano em que você nasceu e calcule a sua idade. Utilize uma função que retorna
         idade. */ 
     
         "use strict"
-        let idade = (ano) => 2021 - anoNasc
+        let idade = ano => 2021 - anoNasc
         let anoNasc = +prompt("Informe o ano em que você nasceu")
-
+            
         console.log(idade(anoNasc))
+
+        /*11) Faça uma função que receba um array de 5 elementos. Modifique o vetor[1] = 10 e vetor[2] = 30 e retorne o vetor modificado. 
+        Ao final mostre na tela o vetor original e o vetor modificado.*/
 
         "use strict"
         
+        function modificar(vetor){
+            vetor[1] = 10
+            vetor[2] = 30
+
+            return vetor
+        }
+
+        let vetor = []        
+        
+        for (let i = 0; i < 5; i++){
+            vetor[i] = Math.floor(Math.random() * (50 - 1)) + 1
+        }
+
+        console.log(vetor)
+        console.log( modificar(vetor))        
+
+        /*12) Faça um procedimento que lê 50 valores inteiros e retorna o maior e o menor deles. 
+        Utilize a função Math.random() para gerar valores aleatórios entre 1-1000.*/ 
+
+        let vetor = []
+                
+        for (let i = 0; i < 50; i++) {
+           vetor[i] = Math.floor(Math.random()*(1000 - 1)) + 1
+        }
+
+        function maiorMenor(vetor){
+            let maior = vetor[0]
+            let menor = vetor[0]
+            for (let i = 1; i < 50; i++){
+                if (vetor[i] > maior) {
+                    maior = vetor[i]
+                }
+                if (vetor[i] < menor){
+                    menor = vetor[i]
+                }
+            }
+
+            return [menor, maior]
+        }
+        
+        console.log(vetor)
+        let resultado = maiorMenor(vetor)
+        console.log(`Menor: ${resultado[0]}\nMaior: ${resultado[1]}`)
+
+        /*13) Faça uma função que recebe a idade de uma pessoa em anos (365 dias), meses e dias e retorna essa idade expressa em dias.*/
+        
+        "use strict"
+
+        function idadeAnos(anos, meses, dias) {
+            return anos * 365 + meses * 30 + dias
+        }
+
+        let anos = +prompt("Digite a quantidade de anos que você viveu")
+        let meses = +prompt("Digite a quantidade de meses")
+        let dias = +prompt("Digite a quantidade de dias")
         
 
+        console.log(idadeAnos(anos, meses, dias))
+
+        /*14) Faça uma função que recebe, por parâmetro, um valor inteiro e positivo e retorna o número de divisores 
+        desse valor.*/
         
-    
-       
-    
-      </body>
-</html>
+        function divisores(inteiro){
+        let divisores = 0
+            for (let i = inteiro; i > 0; i--){
+                if(inteiro % i === 0){
+                    divisores.push(i)
+                }
+            }
+            return divisores
+        }
+
+        /*15) Faça uma função que receba um valor inteiro e positivo e calcule o seu fatorial.*/
+
+        let numero = 0;
+        for (let i = 1; i > 0; i++){
+            numero = +prompt("Informe um número");
+            
+        /*16) Faça uma função que verifique se um valor é perfeito ou não. Um valor é dito perfeito quando ele é igual a 
+        soma dos seus divisores excetuando ele próprio. (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores). 
+        A função deve retornar um valor booleano. Receba um valor do usuário e mostre o resultado da função.*/
+
+    </script>
+</body>
+  </html>
