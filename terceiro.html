@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz = []
+        
+        while (true) {
+            let escolha = +prompt("1) Cadastrar aluno\n2) Editar informações do aluno\n3) Cadastrar notas de um aluno\n4) Listar alunos\n0) Sair...")
+            if (escolha === 0) break
+          
+            switch (escolha) {
+                case 1:
+                    cadastrarAlunos(matriz)
+                    break
+                case 2:
+                    alteraNomeAluno(matriz, prompt("Digite a matricula"))
+                    break
+                case 3:
+                    cadastrarNotas(matriz, prompt("Digite a matricula"))
+                    break
+                case 4:
+                    mostrarMedia(matriz)
+                    break             
+                default:
+                    alert("Número Inválido")
+            }         
+        }
+
+        function verificandoAluno(matriz , matricula) {
+            let jaExiste = false
+
+            for ( aluno of matriz) {
+                if (aluno[0] == matricula) {
+                return true
+              }
+          }
+          return jaExiste
+      }
+ 
+      function  cadastrarAlunos(matriz) {
+          let matNovoAluno = +prompt(`Numero de matricula`)
+
+          if (verificandoAluno(matriz, matNovoAluno)) {
+            alert (`Este aluno ja esta cadastrado em uma matricula.`)
+            return
+          }
+           let arrNovoAluno = []
+           arrNovoAluno[0] = matNovoAluno
+           arrNovoAluno[1] = prompt(`Digite o nome do Aluno`)
+           matriz.push(arrNovoAluno)
+        }
+    
+      function calcularMedia(matriz) {
+          for (let i = 0; i < matriz.length; i++) {
+              let media = ((parseFloat(matriz[i][2]) + parseFloat(matriz[i][3]) + parseFloat(matriz[i][4])) / 3).toFixed(2)
+              
+                if (!isNaN(media)) {
+                    matriz[i][5] = ((parseFloat(matriz[i][2]) + parseFloat(matriz[i][3]) + parseFloat(matriz[i][4])) / 3).toFixed(2)
+                } else {
+                    matriz[i][5] = (0).toFixed(2) 
+                }  
+            }
+        }
+
+        function alteraNomeAluno(matriz, matricula) {
+            let oAluno = verificandoAluno(matriz, matricula)
+
+            if (oAluno == false) {
+                alert(`Não há aluno cadastrado com a matrícula ${matricula}.`)
+                return
+            }
+            for (let idx = 0; idx < matriz.length; idx++) {
+                if (matriz[idx][0] == matricula) {
+                    matriz[idx][1] = prompt(`Altere o nome do aluno "${matriz[idx][1]}"`, matriz[idx][1])
+                }
+            }
+        }
+
+        function cadastrarNotas(matriz, matricula) {
+            let indmatriz = null
+
+            for (let ind = 0; ind < matriz.length; ind++) {
+                if (matriz[ind][0] == matricula) {
+                    indmatriz = ind
+                }
+            }
+
+            if (indmatriz != null) {
+                for (let a = 2; a < 5; a++) {
+                    matriz[indmatriz][a] = prompt(`Digite a ${[a - 1]}ª nota de ${matriz[indmatriz][1]} (matrícula: ${matriz[indmatriz][0]})`)
+                }
+            }
+
+        }
+
+        function strMesmoTamanho(palavra, tamanho) {
+            if (!palavra) {
+                palavra = "--"
+            }
+            let nChar = tamanho - palavra.length
+            let string = " ".repeat(nChar)
+            let metade = Math.floor(string.length / 2)
+            
+            return string.substr(0, metade) + palavra + string.substr(metade)
+        }
+        
+        function mostrarMedia(matriz) {
+            calcularMedia(matriz)
+            let txtResult = `${strMesmoTamanho("Matrícula", 11)}${strMesmoTamanho("Nome", 11)}${strMesmoTamanho("Nota 1", 11)}${strMesmoTamanho("Nota 2", 11)}${strMesmoTamanho("Nota 3", 11)}${strMesmoTamanho("Média", 11)}\n`
+            
+            for (let a = 0; a < matriz.length; a++) {
+                txtResult += `${strMesmoTamanho(matriz[a][0], 11)}${strMesmoTamanho(matriz[a][1], 11)}${strMesmoTamanho(matriz[a][2], 11)}${strMesmoTamanho(matriz[a][3], 11)}${strMesmoTamanho(matriz[a][4], 11)}${strMesmoTamanho(matriz[a][5], 11)}\n`
+            }
+            alert(`${txtResult}`)
+        }
+    </script>
+</body>
+</html>
+   
