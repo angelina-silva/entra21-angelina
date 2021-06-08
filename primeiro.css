@@ -4,3 +4,45 @@
 .esquerda{
 text-indent: 30px;
 }
+.verde{
+    color: forestgreen;
+}
+.big{
+    font-size: 18px;
+}
+.paragrafo{
+    text-indent: 10px;
+}
+.vermelho{
+    color: red;
+}
+.azul{
+    color: royalblue;
+}
+
+.texto-grande {
+    font-size: 20px;
+}
+.titulo-azul {
+    color: rgb(62, 14, 236);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    /* font: 20px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
+}
+
+
+.hr-escuro {
+    border: 2px solid black;
+}
+
+.autor{
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.imagem-centralizada {
+    text-align: center;
+}
