@@ -159,4 +159,11 @@ font-size: 20px
        color: #636363;
        font-size: 28px;
    }
+   .element:before {
+margin: 0 0 1,5em 0;
+padding: 0.35em;
+border: solid 1px;
+color:#efa8b0
+    
+}
   
