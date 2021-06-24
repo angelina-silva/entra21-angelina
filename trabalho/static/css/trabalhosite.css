@@ -10,7 +10,7 @@ line-height: 1.65;
 body nav ul li{
     background-color:whitesmoke;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 10px;
 }
 ul.botop{
      margin: 0;
@@ -25,15 +25,21 @@ ul.botop li{
 }
 ul.botop li a{
 
-    float:left;
-    border: 2px solid white;
-    width: 6.0em;
+    
+    border: none;
+    margin: 10px;
     font:0.68em verdana , Arial, sans-serif;
     background: #f1f1f1;
     color: #333;
     text-align: center;
-    padding: 0 0.3em 0.3em 0;
+    padding:20px;
     text-decoration: none;
+    font-size: 25px;
+    border-radius: 10px;
+    position:relative;
+    box-sizing: border-box;
+    cursor:pointer;
+    transition: all 400ms ease;
 }
 ul.botop a:hover{
     
@@ -93,10 +99,10 @@ ul.botop a:hover{
     color: white;
     text-align: center;
     font-size: 25px;
+    padding-bottom: 100px;
   
 }
 .container{
     display: grid;
-    position: relative;
+   
     
-}
