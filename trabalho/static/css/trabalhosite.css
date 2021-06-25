@@ -8,14 +8,15 @@ line-height: 1.65;
 
 }
 body nav ul li{
-    background-color:whitesmoke;
+    
     text-decoration: none;
     font-size: 10px;
 }
-ul.botop{
-     margin: 0;
-    padding: 0;
+.intro{
+    display: grid;
 }
+    
+
 ul.botop li{
     
     list-style: none;
@@ -49,7 +50,10 @@ ul.botop a:hover{
     border-color:white;
 
 }
-
+.container{
+    display: flex;
+   
+}
 
 .wrapper{
     width: 80%;
@@ -79,10 +83,7 @@ ul.botop a:hover{
     background-color: rgb(175, 16, 10);
     opacity: 1;
 }
-#intro  {
-    display: flex;
-    padding: 100px 100px 65px;
-}
+
 .title {
     text-align: center;
     color:white;
@@ -102,7 +103,30 @@ ul.botop a:hover{
     padding-bottom: 100px;
   
 }
-.container{
-    display: grid;
-   
+
+
+ .imagem img{
+    height:300px;
+    width:400px;
+    background-size:100% auto;
+ }
+ .texto img{
+     position: relative;
+ }
+  .texto a{
+      position: absolute;
+      left: 50%;
+  
+    padding:20px;
+    font-family:Arial;
+    text-align:center;
+    color:white;
+    opacity:0;
+    transition: opacity .2s linear;
+    background-color:rgba(0,0,0,.7);
+  } 
+  
+  .imagem:hover .texto a{
+    opacity:1;
+   }
     
