@@ -50,8 +50,9 @@ ul.botop a:hover{
     border-color:white;
 
 }
+
 .container{
-    display: flex;
+    display:grid;
    
 }
 
@@ -66,7 +67,8 @@ ul.botop a:hover{
 .main-header h1 {
     font-size: 55px;
     color: white;
-    margin: 0 0 13px
+    margin: 0 0 13px;
+   
 }
 .main-header p {
     color: #ffffffa6;
@@ -87,8 +89,9 @@ ul.botop a:hover{
 .title {
     text-align: center;
     color:white;
-    font-size: 45px;
+    font-size: 25px;
     margin: 0px 0px 31px ;
+    padding-top: 50px;
 }
 
 .fim{
