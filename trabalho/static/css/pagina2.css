@@ -1,0 +1,23 @@
+body{
+    background-color:#bfac4ed8 ;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+main{
+    background-color: blanchedalmond;
+    width: 800px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 15px;
+    
+}
+h1{
+    color: #1C8C43 ;
+    text-align: center;
+    text-shadow:1px 1px 6px #072411ad ;
+    font-size: 40px;
+
+}
+ p{
+    text-align: justify;
+    text-indent: 20px;
+}
