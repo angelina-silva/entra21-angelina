@@ -1,5 +1,5 @@
 body{
-    background-color:#bfac4ed8 ;
+    background-color:#F2A25C ;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
 main{
@@ -11,13 +11,34 @@ main{
     
 }
 h1{
-    color: #1C8C43 ;
+    color:#400101; ;
     text-align: center;
     text-shadow:1px 1px 6px #072411ad ;
     font-size: 40px;
+}
 
+img{
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
 }
  p{
     text-align: justify;
     text-indent: 20px;
+}
+h1::before{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 500px;
+    background-color: #400101;;
+    margin:20px auto;
+
+}
+h2{
+    color:#400101; ;
+    text-align: center;
+    text-shadow:1px 1px 6px #072411ad ;
+    font-size: 30px;
+
 }

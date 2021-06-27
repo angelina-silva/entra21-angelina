@@ -1,52 +1,152 @@
 
-
-body {
-
-background-color:#bfac4eec;
-
-
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image:url(../img/por\ do\ sol.jpg);
+    background-position: center top;
+    background-position : no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 300px;
+    padding-top: 300px;
+    margin:30px;
 }
+img{
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    
+}
+header{
+    padding: 40px;
+}
+.paragrafo p{
+    color:black;
+    text-align: center;
+    font-size: 30px;
+}
+
 main{
-    background-color:#A8D977 ;
+    background-color:#F2A25C;
     padding: 50px;
-    margin: auto;
+    margin:50px auto;
     border-radius: 10px;
 
+} /** formato grid;
+.container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+
 }
+.imagem2{
+    grid-row:1/3 ;
+}
+.container{
+    display: grid;
+}
+.container img{
+    grid-column: 1;
+    grid-row: 2/3;
+    align-self: end;
+}
+.container a{
+    background: rgba(0,0,0,6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2/3;
+    align-self: end;
+
+
+}**/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+}
+.container > div{
+    flex:1 1 200px;
+    margin: 10px;
+}
+.bloco{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+.bloco > div{
+    flex: 1 1 200px;
+    margin :10px;
+}
+
+
+.sub{
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+
+}
+ .texto::before{
+    content: "";
+    display: block;
+    height: 3px;
+    width: auto;
+    background-color: black;
+    margin:30px auto;
+        }
+
+.sub::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 500px;
+    background-color: black;
+    margin:20px auto;
+    
+}
+.texto h2{
+    color:black;
+    font-size: 30px;
+    text-align: center;
+}
+.texto p{
+    color:black;
+    font-size: 30px;
+    text-align: center;
+}
+   
 h1{
     color:black;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     padding-top: 10px;
 }
-body nav ul li{
-    
-    text-decoration: none;
-    font-size: 10px;
+
+nav{
+    padding: 10px;
 }
-.intro{
-    display: grid;
-}
-p{
-    text-align:justify;
-}
-    
 
 ul.botop li{
     
     list-style: none;
     display: inline-block;
+    
    
     
 }
 ul.botop li a{
-
-    
     border: none;
     margin: 10px;
     font:0.68em verdana , Arial, sans-serif;
     background: #f1f1f1;
-    color: #333;
+    color:black;
     text-align: center;
     padding:20px;
     text-decoration: none;
@@ -57,92 +157,69 @@ ul.botop li a{
     cursor:pointer;
     transition: all 400ms ease;
 }
-ul.botop a:hover{
-    
+.container a{
+    border: none;
+    margin:10px;
+    text-decoration: none;
+    color:black;
+    font-size: 30px;
+    padding:5px;
+   
+    transition: all 400ms ease;
+}
+
+
+.container a:hover{
     font-style: oblique;
-    background: black;
+    
     color:#ffff;
     border-color:white;
 
 }
+ul.botop a:hover{
+    
+    font-style: oblique;
+    background:#77CAF6;
+    color:#ffff;
+    border-color:white;
 
-.container{
-    display:grid;
-   
+}
+.oculos:hover{
+    transform:rotate(500grad);
+    transition: 3s ease;
+
+}
+.camera:hover{
+    transform:rotate(500grad);
+    transition: 3s ease;
+
+
 }
 
-
-   
-.main-header{
-    padding: 96px 64px 48px;
-    text-align: center;
-}
-
-   
-
-.main-header p {
-    color: #ffffffa6;
-    font-size: 30px
-    }
-#nav{
-    background-color:#1C8C43;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 20px;
-}
-
-#main-content {
-    background-color: rgb(175, 16, 10);
-    opacity: 1;
-}
 
 .title {
     text-align: center;
-    color:white;
-    font-size: 25px;
+    color:black;
+    font-size: 35p;
     margin: 0px 0px 31px ;
     padding-top: 50px;
 }
 
 .fim{
-    color: white;
+    color: black;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
 }
 .rodape p{
-    color: white;
+   color:black;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     padding-bottom: 100px;
   
 }
 
 
- .imagem img{
-    height:300px;
-    width:400px;
-    background-size:100% auto;
- }
- .texto img{
-     position: relative;
- }
-  .texto a{
-      position: absolute;
-      left: 50%;
+ 
   
-    padding:20px;
-    font-family:Arial;
-    text-align:center;
-    color:white;
-    opacity:0;
-    transition: opacity .2s linear;
-    background-color:rgba(0,0,0,.7);
-  } 
   
-  .imagem:hover .texto a{
-    opacity:1;
-   }
-   .decor p{
-       text-align: end;
-   }
     
