@@ -42,3 +42,12 @@ h2{
     font-size: 30px;
 
 }
+@media screen and (min-width: 360px) {
+    .body{width: 64em;
+        max-width: calc(100% - 2em);
+        margin: auto;
+    }
+    #main {
+        border-radius: 6px;
+    }
+}
