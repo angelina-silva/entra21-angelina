@@ -1,1 +1,35 @@
+body{
+    background-color:#eedac98c ;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+h1{
+    font-size: 40px;
+}
+h1::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: auto;
+    background-color: black;
+    margin:30px auto;
+}
 
+}
+h2{
+    font-size: 30px;
+    text-align: start;
+}
+p{
+    font-size: 20px;
+}
+ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color:black
+
+
+}
+.decoração a:hover{
+    color:green;
+   
+}
