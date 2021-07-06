@@ -68,9 +68,19 @@
             </div>
         </div>
     </body>
-    
-    Utilize event delegation para fazer os botões de remoção funcionar
     <script>
+       let container = document.querySelector("#container")
+
+       container.addEventListener("click", (e) => {
+           const target = e.target
+           console.log(target)
+           if (target.className === "remove-button") {
+               target.closest(".pane").remove()
+               /* target.parentElement.remove()*/
+           }
+       })
+       
+
         
         
     </script>
