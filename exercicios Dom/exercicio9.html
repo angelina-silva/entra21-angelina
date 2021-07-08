@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .selecionada{
+            background-color: aqua;
+        }
+    </style>
+    <ul>
+        <li>Primeiro Item</li>
+        <li>Segundo Item</li>
+        <li>Terceiro Item</li>
+        <li>Quarto Item</li>
+        <li>Quinto Item</li>
+    </ul>
+     <script>
+         let ul = document.querySelector("ul")
+         ul.addEventListener("click", (event) => {
+                if (event.target.tagName != "LI") return
+                if (event.ctrlKey) {
+                    alternarSelecao(event.target)
+                } else {
+                    selecaoUnica(event.target)
+                }
+            })                
+
+            function alternarSelecao(li) {
+                li.classList.toggle("selecionada");
+            }
+
+            function selecaoUnica(li) {
+                let liSelecionadas = ul.querySelectorAll(".selecionada");
+                for (let elem of liSelecionadas) {
+                    elem.classList.remove("selecionada");
+                }
+                li.classList.add("selecionada");
+            }
+
+     </script>
+</body>
+</html>
