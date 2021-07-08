@@ -7,12 +7,34 @@
 </head>
 <body>
     <script>
-        function rodaNasTeclas (func, code1, code2, ...codeN)
-        let teclasPressionadas = new Set ()
+        function rodaNasTeclas(func,...codes) {
+            let teclasPressionadas = new Set()
 
-        document.addEventListener ("keydown", function(event){
-            teclasPressionadas.add(event.code)
-        })
+            document.addEventListener('keydown', function(event) {
+                teclasPressionadas.add(event.code)
+
+                for (let code of codes) {
+                    if (!teclasPressionadas.has(code)) {
+                        return
+                    }
+                }
+
+                teclasPressionadas.clear()
+
+                func()
+            })
+
+            document.addEventListener('keyup', function(event) {
+                teclasPressionadas.delete(event.code)
+            })
+        }
+
+        rodaNasTeclas(
+            () => alert("Hello!"),
+            "KeyQ",
+            "KeyW"
+        )
+        
     </script>
     
 </body>

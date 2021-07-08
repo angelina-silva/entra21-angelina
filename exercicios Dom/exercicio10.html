@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+    <style>
+        div {
+            position: fixed;            
+            top: 10px;
+        }
+
+        p {
+            margin-top: 1500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mostrar-scroll">0px</div>
+    <p>Escondido</p>
     <script>
+        window.addEventListener("scroll", () => {
+            document.querySelector(".mostrar-scroll").textContent = window.pageYOffset + "px"
+        })
+
+        
+        let botaoVoltar = document.querySelector("#voltar")
+        botaoVoltar.addEventListener("click", () => {
+            window.scrollTo(pageXOffset, 0)
+        })        
+
+        window.addEventListener('scroll', function() {
+            botaoVoltar.hidden = (pageYOffset < document.documentElement.clientHeight)
+        })
         
     </script>
 </body>
