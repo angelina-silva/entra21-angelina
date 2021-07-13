@@ -9,28 +9,40 @@
 
 <body>
     <label for="inputInicial">
-        Valor inicial
+        Valor inicial:
         <input type="number" id="inputInicial" value="10.000">
-    </label>
+    </label> <br><br>
     <label for="inputJuros">
-        Juros
+        Juros:
         <input type="number" id="inputJuros" value="5">
-    </label>
+    </label> <br><br>
     <label for="inputMeses">
-        Quantidade Meses
-        <input type="number" id="inputMeses" value="16">
-    </label>
-    <p id="resultado"> Resultado: R$0,00</p>
+        Quantidade Meses:
+        <input type="number" id="inputMeses" value="12">
+    </label> <br><br>
+    <p id="resultado"> Resultado: R$:</p>
     <script>
-const inputInicial = document.querySelector("#inputInicial"),
-      inputJuros = document.querySelector("#inputJuros"),
-      inputMeses = document.querySelector("#inputMeses"),
-      resultado = document.querySelector("#resultado")
-      {
-          
-      }
+        const inputInicial = document.querySelector("#inputInicial"),
+              inputJuros = document.querySelector("#inputJuros"),
+              inputMeses = document.querySelector("#inputMeses"),
+              resultado = document.querySelector("#resultado")
+        {
 
-     
+        }
+        function mostrarResultado() {
+            const valorInicial = +inputInicial.value,
+                  juros = +inputJuros.value / 100,
+                  anos = + inputMeses.value / 12 
+
+                  let resultado = Math.round(inicial * (1 = juros * anos))
+
+                  document.querySelector("#resultado").textContent= "Resultado: R$"+ resultado
+
+        }
+        inputInicial.addEventListener("input", mostrarResultado)
+        inputJuros.addEventListener("input",mostrarResultado)
+        inputMeses.addEventListener("input",mostrarResultado)
+
     </script>
 </body>
 
