@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Aluno {
+            constructor(matricula, nome, n1, n2, trabalho) {
+                this.matricula = matricula;
+                this.nome = nome;
+                this.n1 = n1;
+                this.n2 = n2;
+                this.trabalho = trabalho;
+            }
+            media() {
+                return ((this.n1 * 3) + (this.n2 * 3) + (this.trabalho * 2)) / 8;
+            }
+            final() {
+                const media = this.media();
+                if (media >= 6) {
+                    console.log(`O aluno foi aprovado com a média ${media.toFixed(2)}`);
+                } else {
+                    console.log(`O aluno foi reprovado com a média ${media.toFixed(2)}`);
+                }
+            }
+        }
+
+        const aluno1 = new Aluno(123, "João", 5, 9, 10);
+        console.log(aluno1.media());
+        aluno1.final();
+
+        const aluno2 = new Aluno(123, "pedro", 5, 5, 8);
+        console.log(aluno2.media());
+        aluno2.final();
+
+    </script>
+
+</body>
+
+</html>
