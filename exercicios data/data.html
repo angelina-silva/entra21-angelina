@@ -79,6 +79,8 @@
         function formataData() {
             let data = new Date()
             let dia = data.getDate()
+            let horas = data.getHours()
+            let minutos = data.getMinutes()
             if (dia.toString().length === 1) {
                 dia = "0" + dia
             }
