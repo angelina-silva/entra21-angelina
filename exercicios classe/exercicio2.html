@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+
+        class Agenda {
+            #listaPessoas
+
+            constructor() {
+                this.#listaPessoas = []
+            }
+
+            armazenaPessoa(nome, telefone) {
+                if (this.#listaPessoas.length < 10) {
+                    this.#listaPessoas.push(new Pessoa(nome, telefone));
+                } else {
+                    console.log("Não é possível adicionar mais pessoas na agenda!");
+                }
+            }
+
+            removePessoa(nome) {
+                const indicePessoa = this.#listaPessoas.findIndex(pessoa => pessoa.nome === nome);
+
+                if (indicePessoa >= 0) {
+                    this.#listaPessoas.splice(indicePessoa, 1);
+                    return console.log("A pessoa foi removida da agenda");
+                }
+
+                return console.log("A pessoa não está cadastrada");
+            }
+
+            buscaPessoa(nome) {
+                const pessoa = this.#listaPessoas.find(pessoa => pessoa.nome === nome);
+
+                if (pessoa) {
+                    return console.log(`O número de telefone do/da ${nome} ${pessoa.telefone}`);
+                }
+
+                return console.log("A pessoa não está cadastrada");
+            }
+
+            imprimeAgenda() {
+                if (!this.#listaPessoas.length) {
+                    return console.log("Não existe nenhuma pessoa cadastrada!");
+                }
+
+                for (let pessoa of this.#listaPessoas) {
+                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`);
+                }
+            }
+
+            imprimePessoa(indice) {
+                if (this.#listaPessoas[indice]) {
+                    const pessoa = this.#listaPessoas[indice];
+                    return console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`);
+                }
+
+                return console.log("Não existe nenhuma pessoa cadastrada nesse índice");
+            }
+        }
+
+        const agenda = new Agenda();
+        agenda.armazenaPessoa("João", "(47) 9 9999-9999");
+        agenda.armazenaPessoa("Pedro", "(47) 9 9999-9992");
+
+        // agenda.removePessoa("João");
+        // agenda.buscaPessoa("Marcos");
+        // agenda.imprimeAgenda();
+        // agenda.imprimePessoa(2);
+        console.log(agenda);
+
+    </script>
 </body>
+
 </html>
