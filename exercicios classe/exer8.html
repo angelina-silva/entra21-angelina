@@ -17,18 +17,51 @@
 
         }
         class Novo extends Imovel {
-            constructor (endereco , preco, valorAdicional ) {
-            super(endereco);
-            super(preco)
-            this.valorAdicional = calculaTotal()
-            }   
-
-            acesso()
-
-            impressao()
-            
+            #valorAdicional
+            constructor(endereco, preco, valorAdicional) {
+                super(endereco, preco);
+                this.valorAdicional = valorAdicional;
+            }
+            get valorAdicional() {
+                return this.#valorAdicional;
+            }
+            set valorAdicional() {
+                this.#valorAdicional = valor;
+            }
+            calculaTotal() {
+                return this.preco + this.#valorAdicional;
+            }
         }
-        
+
+        class Velho extends Imovel {
+            #valorDesconto;
+            constructor(endereco, preco, valorDesconto) {
+                super(endereco, preco);
+                this.#valorDesconto = valorDesconto;
+            }
+
+            get valorDesconto() {
+                return this.#valorDesconto;
+            }
+
+            set valorDesconto(valor) {
+                this.#valorDesconto = valor;
+            }
+
+            calculaTotal() {
+                return this.preco - this.#valorDesconto;
+            }
+        }
+
+        const imovelNovo = new Novo("Rua aaa", 1000, 20);
+        imovelNovo.valorAdicional = 100;
+        console.log(imovelNovo.valorAdicional);
+        console.log(imovelNovo.calculaTotal());
+
+        const imovelVelho = new Velho("Rua aaa", 1000, 20);
+        imovelVelho.valorDesconto = 100;
+        console.log(imovelVelho.valorDesconto);
+        console.log(imovelVelho.calculaTotal());
     </script>
 </body>
 

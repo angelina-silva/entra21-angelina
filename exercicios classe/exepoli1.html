@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Produto {
+            #descricao
+            constructor(nomeLoja, preco, descricao) {
+                this.nomeLoja = nomeLoja;
+                this.preco = preco;
+                this.descricao = descricao;
+            }
+            getDescricao() {
+                return this.#descricao;
+            }
+            getDescricao() {
+                return "Produto de Informática"
+            }
+        }
+        const produto = new Produto("havan", 99.99);
+        console.log(produto.getDescricao());
+
+        class Mouse extends Produto {
+            constructor(nomeLoja, preco, descricao, tipo) {
+                super(nomeLoja, preco, descricao);
+                this.tipo = tipo;
+            }
+            getDescricao() {
+                return `${this.descricao} ${this.tipo}`;
+            }
+        }
+        const mouse = new Mouse("havan ", 99.99, "Mouse ótico, Saída USB. 1.600 dpi, Gamer")
+        console.log
+    </script>
+</body>
+
+</html>
