@@ -15,12 +15,35 @@
         deve ser mostrado uma mensagem "Finalizando o programa...". */ 
 
          
-         function somar(n1, n2){
-             if (n1+ n2 === par || n1 + n2 === ímpar)
-          throw new OddNumberError (" O número é ímpar")
-         }
-         let n1 = 5
-         console.log (err)
+        
+         class OddNumberError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "OddNumberError";
+            }
+        }
+
+        function somar(n1, n2) {
+            const resultado = n1 + n2;
+
+            if (resultado % 2 !== 0) {
+                throw new OddNumberError("O número é ímpar");
+            }
+
+            return resultado;
+        }
+
+        try {
+            const n1 = 3,
+                  n2 = 2;
+            
+            const resultado = somar(n1, n2);
+            console.log(`${n1} + ${n2} = ${resultado}`);
+        } catch (err) {
+            console.log(`Ocorreu um erro: ${err.message}`);
+        }
+
+        console.log("Finalizando programa...");
     </script>
 </body>
 </html>
